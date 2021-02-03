@@ -1,0 +1,19 @@
+<script>
+//pagenation 
+function page(){
+    var html=""
+    var page = parseInt($('#page').val());
+    var data_total = parseInt($('#total').val());
+    var scale = parseInt($('#scale').val());
+    var page_num = Math.ceil(data_total/scale);
+    console.log(page_num);
+    if(page==1) {
+        {
+            for(var i=1;i<=page_num;i++)
+            html+= "<a href='"+i+"'> "i" </a>"
+
+        }
+    }
+    $("#page_zone").html(html);
+}
+</script>
